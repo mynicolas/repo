@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head lang="en">
+        <meta charset='utf-8'>
+        <title>TianCheng Open Source Software Mirror</title>
+        <link rel = "stylesheet" type = "text/css" href = "/repo/static/main.css"/>
+    </head>
+    <script type = "text/javascript" src = "/repo/static/main.js"></script>
+    <script type = "javascript">
+        var stateObj = { foo: "bar" };
+        history.pushState(stateObj, "ynnic", "/")
+    </script>
+    <body>
+        <div id = "header">
+            <h2>Welcome to the <a id = "indexLink" href = "/ynnic/">YNNIC.ORG</a> open source mirror.</h2>
+        </div>
+        <div id = "container">
+            <div id = "table">
+                <div id = "tableHead">
+                    <div class = "column1">Folder</div>
+                    <div class = "column2">Last Update</div>
+                    <div class = "column3">Status</div>
+                    <div class = "clearFloat"></div>
+                </div>
+                <div class = "tableBody">
+                    {% for item in contextlist %}
+                        <div class = "repoItem">
+                            <div class = column1><a href = "/log/{{ item.repo }}/">{{ item.repo }}</a></div>
+                            <div class = column2>{{ item.stopTime }}</div>
+                            <div class = column3>{{ item.status }}</div>
+                            <div class = "helpButton" onmousedown = "post(this)">help</div>
+                            <div class = "clearFloat"></div>
+                        </div>
+                    {% endfor %}
+                    <div id = "ynnic">
+                        <div class = "column1"><a id = "ynnicLink" href = "/ynnic/">ynnic</a></div>
+                        <div class = "column2">(-^@^-)</div>
+                        <div class = "column3">(-^@^-)</div>
+                        <div class = "helpButton" onmousedown = "post(this)">help</div>
+                        <div class = "clearFloat"></div>
+                    </div>
+                    <div class = "clearFloat"></div>
+                </div>
+                <div class = "clearFloat"></div>
+            </div>
+            <div class = "clearFloat"></div>
+        </div>
+        <div class = "clearFloat"></div>
+    </body>
+</html>

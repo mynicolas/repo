@@ -1,0 +1,12 @@
+<div id = "helpContainerUp">
+    <div id = "dialogBody">
+        <div id = "dialogHead">
+            <div id = "dialogHeadTitle">help content</div>
+            <div id = "dialogHeadClose"><img id = "dialogHeadCloseImg" src = "/repo/static/close.png"/></div>
+            <div class = "clearFloat"></div>
+        </div>
+        <div id = "helpContentUp"></div>
+        <div class = "clearFloat"></div>
+    </div>
+    <div class = "clearFloat"></div>
+</div>
